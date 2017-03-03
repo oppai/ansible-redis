@@ -110,3 +110,8 @@ redis_sentinel_monitors:
     failover_timeout: 180000
     notification_script: false
     client_reconfig_script: false
+
+# Redis cluster config
+redis_cluster_enabled: no
+redis_cluster_config_file: nodes.conf
+redis_cluster_node_timeout: 5000

@@ -98,7 +98,9 @@ client-output-buffer-limit pubsub 32mb 8mb 60
 hz 10
 aof-rewrite-incremental-fsync yes
 
+{% if redis_cluster_enabled == yes -%}
 # Cluster
 cluster-enabled {{ redis_cluster_enabled }}
 cluster-config-file {{ redis_cluster_config_file }}
 cluster-node-timeout {{ redis_cluster_node_timeout }}
+{% endif -%}
